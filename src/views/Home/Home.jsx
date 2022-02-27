@@ -11,43 +11,15 @@ import "./home.scss";
 import CollectionCard from "../../components/CollectionCard";
 import RowCollectionCard from "../../components/RowCollectionCard";
 import RowHeader from "../../components/RowHeader";
+import TopBarV1 from "../../components/TopBarV1";
 
 function Home() {
   return (
     <div id="home-view">
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Grid container className="nft-header">
-            <Grid item xs={12} sm={12} md={5} lg={5} className="header-item">
-              <OutlinedInput
-                className="nft-search"
-                placeholder="Search for collections and NFTs"
-                className="stake-input"
-                width="70%"
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={2} lg={2} className="header-item"></Grid>
-            <Grid item xs={10} sm={10} md={4} lg={4} className="header-item">
-              <div className="nft-info-wrap">
-                <div className="info-item info-left">
-                  <p className="info-num">2</p>
-                  <p className="info-text">COLLECTIONS</p>
-                </div>
-                <div className="info-item info-center">
-                  <p className="info-num">6632</p>
-                  <p className="info-text">SALES</p>
-                </div>
-                <div className="info-item info-right">
-                  <p className="info-num">431.4K</p>
-                  <p className="info-text">VOLUME</p>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={2} sm={2} md={1} lg={1} className="header-item mode-icon">
-              <img src={modeImg} alt="" />
-            </Grid>
-          </Grid>
-        </Grid>
+        
+        <TopBarV1 modeImg={modeImg} />
+
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <div className="page-title">
             <img src={lightIcon} alt="" />

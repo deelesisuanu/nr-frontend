@@ -38,7 +38,11 @@ function Collection() {
   const [nCardRank, setNCardRank] = useState("");
   const [nCardOwner, setNCardOwner] = useState("");
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (cardImage, cardTitle, rankNo, cardOwner) => {
+    setNCardImg(cardImage);
+    setNCardTitle(cardTitle);
+    setNCardRank(rankNo);
+    setNCardOwner(cardOwner);
     setOpen(true);
   };
 
@@ -181,8 +185,8 @@ function Collection() {
                   y2="12.712"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#04AD79"></stop>
-                  <stop offset="1" stop-color="#00AE76"></stop>
+                  <stop stopColor="#04AD79"></stop>
+                  <stop offset="1" stopColor="#00AE76"></stop>
                 </linearGradient>
               </defs>
             </svg>
@@ -202,32 +206,44 @@ function Collection() {
               handleClickOpen={handleClickOpen} 
               cardImage={nftImg1} 
               rankNo="4" 
-              itemNo="252" />
+              itemNo="252"
+              cardTitle="Card Title 1"
+              cardOwner="John" />
             <CollectionCardV3 
               handleClickOpen={handleClickOpen} 
               cardImage={nftImg4} 
               rankNo="4" 
-              itemNo="252" />
+              itemNo="252"
+              cardTitle="Card Title 2"
+              cardOwner="Smih" />
             <CollectionCardV3 
               handleClickOpen={handleClickOpen} 
               cardImage={nftImg2} 
               rankNo="4" 
-              itemNo="252" />
+              itemNo="252"
+              cardTitle="Card Title 3"
+              cardOwner="Sover" />
             <CollectionCardV3 
               handleClickOpen={handleClickOpen} 
               cardImage={nftImg3} 
               rankNo="4" 
-              itemNo="252" />
+              itemNo="252"
+              cardTitle="Card Title 4"
+              cardOwner="Jansen" />
             <CollectionCardV3 
               handleClickOpen={handleClickOpen} 
               cardImage={nftImg3} 
               rankNo="4" 
-              itemNo="252" />
+              itemNo="252"
+              cardTitle="Card Title 5"
+              cardOwner="Kaisi" />
             <CollectionCardV3 
               handleClickOpen={handleClickOpen} 
               cardImage={nftImg3} 
               rankNo="4" 
-              itemNo="252" />
+              itemNo="252"
+              cardTitle="Card Title 6"
+              cardOwner="Swaa" />
           </Grid>
         </Grid>
         <Grid item sx={12} md={12} lg={12} className="no-gap">
@@ -247,13 +263,13 @@ function Collection() {
         </Grid>
       </Grid>
       
-      {/* <DialogModal 
+      <DialogModal 
         handleClose={handleClose}
         open={open}
         cardImg={nCardImg}
         cardTitle={nCardTitle}
         cardRank={nCardRank}
-        cardOwner={nCardOwner} /> */}
+        cardOwner={nCardOwner} />
 
       {/* <Dialog fullWidth={true} maxWidth={"md"} onClose={handleClose} open={open}>
         <div className="diag-wrap" style={{ padding: "16px" }}>

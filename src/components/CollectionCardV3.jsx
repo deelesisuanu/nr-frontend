@@ -1,9 +1,13 @@
 import { Grid } from "@material-ui/core";
 
-const CollectionCardV3 = ({ handleClickOpen, cardImage, rankNo, itemNo }) => {
+const CollectionCardV3 = ({ handleClickOpen, cardImage, rankNo, itemNo, cardTitle, cardOwner }) => {
+
+  const customInnerClick = () => {
+    handleClickOpen(cardImage, cardTitle, rankNo, cardOwner);
+  }
 
   return (
-    <Grid item xs={12} sm={3} md={2} lg={2} onClick={() => handleClickOpen()}>
+    <Grid item xs={12} sm={3} md={2} lg={2} onClick={() => customInnerClick()}>
       <div className="nft-item">
         <img className="nft-img" src={cardImage} alt="" />
         <div className="nft-row-wraps-col">
